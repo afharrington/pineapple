@@ -9,6 +9,10 @@
   margin-top: 20px;
 }
 
+.pineapple-slide .slider-content-text {
+  color: #2f2c2c !important;
+}
+
 .slides-title {
   font-size: 20px !important;
 }
