@@ -2,6 +2,10 @@
     float: right !important;
 }
 
+.contacts .title {
+  font-size: 18px !important;
+}
+
 .pineapple {
   display: block !important;
   text-align: center !important;
