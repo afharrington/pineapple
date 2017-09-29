@@ -1,0 +1,79 @@
+.header nav {
+    float: right !important;
+}
+
+.pineapple {
+  display: block !important;
+  text-align: center !important;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.slides-title {
+  font-size: 20px !important;
+}
+
+.testimonial-heading {
+  font-size: 36px;
+}
+
+.case-item {
+  cursor: pointer;
+  height: 325px;
+  padding: 8px;
+}
+
+.case-item p {
+  width: 100%;
+}
+
+@media (max-width: 980px) {
+  .slider-content-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-content {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  .slider-content-text, .slider-content-title {
+    text-align: left;
+  }
+
+  .pineapple-slide .slider-content-title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .pineapple-slide .slider-content-text {
+      font-size: 18px;
+      text-align: left;
+  }
+}
+
+@media (max-width: 375px) {
+  .pineapple img {
+    max-width: 40%;
+  }
+
+  .swiper-slide {
+    height: 510px !important;
+  }
+
+  .main-slider .slider-content .slider-content-text {
+    margin-top: 40px;
+  }
+
+
+  .main-slider-btn-wrap {
+    margin-top: 50px !important;
+  }
+
+  .slider-image {
+    display: none;
+  }
+}
