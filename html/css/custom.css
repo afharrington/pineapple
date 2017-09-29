@@ -17,6 +17,14 @@
   font-size: 36px;
 }
 
+.slides-item {
+  cursor: pointer;
+}
+
+.slides-item:hover {
+  background-color: #d3d3d3;
+}
+
 .case-item {
   cursor: pointer;
   height: 325px;
