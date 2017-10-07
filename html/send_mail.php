@@ -1,39 +1,44 @@
 <?php
-global $_POST;
-$mail_to = 'anna@pineappleny.com'; //Your email here
+	use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\Exception;
+	require '../vendor/phpmailer/phpmailer/src/phpmailer.php';
+	require '../vendor/autoload.php';
 
-// Required fields
-$email = isset( $_POST['email'] ) ? strip_tags( trim( $_POST['email'] ) ) : '';
-$name  = isset( $_POST['name'] ) ? strip_tags( trim( $_POST['name'] ) ) : '';
-$text  = isset( $_POST['message'] ) ? strip_tags( trim( $_POST['message'] ) ) : '';
-// Additional fields
-$subject   = isset( $_POST['subject'] ) ? strip_tags( trim( $_POST['subject'] ) ) : '';
-$permalink = isset( $_POST['permalink'] ) ? strip_tags( trim( $_POST['permalink'] ) ) : '';
-$phone     = isset( $_POST['phone'] ) ? strip_tags( trim( $_POST['phone'] ) ) : '';
-$company   = isset( $_POST['company'] ) ? strip_tags( trim( $_POST['company'] ) ) : '';
+	$mail = new PHPMailer(true);
 
+	try {
+    //Server settings
+    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'sub4.mail.dreamhost.com';              // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = 'annapineapple';                 // SMTP username
+    $mail->Password = 'thankyoudolphin';                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;                                    // TCP port to connect to
 
-$mail_subject = $subject != '' ? $subject : 'From Contact form on website';
+    //Recipients
+    $mail->setFrom('contact@pineappleny.com', 'Contact Form');
+    $mail->addAddress('contact@pineappleny.com', 'Anna');     // Add a recipient
+    //$mail->addAddress('ellen@example.com');               // Name is optional
+    //$mail->addReplyTo('info@example.com', 'Information');
+    //$mail->addCC('cc@example.com');
+    //$mail->addBCC('bcc@example.com');
 
-$message = '<h3>You got a mail from website:</h3>' . '<br/>';
-$message .= '<b>Name:</b> ' . $name . '<br/>';
-$message .= '<b>Email:</b> ' . $email . '<br/>';
+    //Attachments
+    //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+    //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
-if ( ! empty( $permalink ) ) {
-	$message .= '<b>Website:</b> ' . $permalink . '<br/>';
+    //Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Subject line goes here';
+    $mail->Body    = 'Body text goes here';
+    //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
 }
-if ( ! empty( $phone ) ) {
-	$message .= '<b>Phone:</b> ' . $phone . '<br/>';
-}
-if ( ! empty( $company ) ) {
-	$message .= '<b>Company:</b> ' . $company . '<br/>';
-}
-
-$message .= '<b>Message:</b> ' . $text . '<br/>';
-$headers = 'MIME-Version: 1.0' . '\r\n';
-$headers .= 'Content-type:text/html;charset=UTF-8' . '\r\n';
-
-// More headers
-$headers .= 'From: <' . $email . '>' . '\r\n';
-
-mail( $mail_to, $mail_subject, $message, $headers );
+?>

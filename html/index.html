@@ -1,6 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head lang="en">
+
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107286716-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107286716-1');
+</script>
+<!-- End Google Analytics -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Pineapple | A Digital Agency</title>
@@ -15,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="css/modules.css">
     <link rel="stylesheet" type="text/css" href="css/widgets-styles.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
 
     <!--Plugins styles-->
 
@@ -41,12 +54,11 @@
 
 <!-- <header class="header" id="site-header"> -->
 <header class="header">
-    <div class="container">
 
-            <div class="header-content-wrapper">
+            <div>
 
                 <div class="logo">
-                    <a href="index.html" class="full-block-link"></a>
+                    <a href="#" class="full-block-link"></a>
                     <img src="img/pineapple-logo.png" alt="Pineapple Logo">
                     <div class="logo-text">
                         <div class="logo-title">Pineapple</div>
@@ -73,43 +85,43 @@
                             <a href="#pineapple-process">About</a>
                         </li>
 
-                        <!-- <li class="">
+                        <li class="">
                             <a href="#">Services</a>
                             <ul class="dropdown">
                                 <li class="hover-ver2">
-                                    <a href="./service_01.html">
+                                    <a href="/webdevelopment">
                                         Web Development
                                     </a>
                                 </li>
                                 <li class="hover-ver2">
-                                    <a href="#">
+                                    <a href="/seo">
                                         Search Engine Optimization
                                     </a>
                                 </li>
                                 <li class="hover-ver2">
-                                    <a href="#">
+                                    <a href="/digitalmarketing">
                                         Digital Marketing
                                     </a>
                                 </li>
                                 <li class="menu-item-has-children hover-ver2">
-                                    <a href="#">
+                                    <a href="/cro">
                                         Conversion Rate Optimization
                                     </a>
                                 </li>
                                 <li class="hover-ver2">
-                                    <a href="#">
+                                    <a href="/ecommerce">
                                         E-Commerce
                                     </a>
                                 </li>
                             </ul>
-                        </li> -->
+                        </li>
 
                         <li class="menu-item-has-children">
                             <a href="#featured-work">Work</a>
                         </li>
 
                         <li class="">
-                            <a href="#pineapple-score">Contact</a>
+                            <a href="#site-footer">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -118,47 +130,48 @@
 </header>
 <!-- ... End Header -->
 
-<div class="content-wrapper">
+<div>
     <div class="header-spacer"></div>
 <!-- Main Slider -->
 
-    <div class="container-full-width">
-            <div class="swiper-container main-slider" data-effect="fade" data-autoplay="9000">
+    <div id="top">
+            <div class="swiper-container main-slider" data-effect="fade" data-autoplay="8000">
 
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
 
-                    <!-- Slide Conversion -->
-                    <div class="intro-slide top-slide swiper-slide bg-border-color main-slider-bg-dark">
+                    <!-- Slide Intro -->
+                    <div class="intro-slide top-slide swiper-slide bg-border-color main-slider-bg-dark thumb-left">
+
                         <div class="container table full-height">
                             <div class="row table-cell">
 
-                                <div class="col-lg-12">
-
-                                    <div class="slider-content align-center">
-                                      <img class="intro-pineapple" src="img/pineapple-small.png"/>
-                                      <h3 class="slider-content-title" data-swiper-parallax="-100">The web can be as complicated as it sounds, but we know how it fits together.</h3>
-                                      <h5 class="slider-content-text" data-swiper-parallax="-200">Pineapple is a full-service digital agency with an in-house team of specialists equipped to handle just about any digital project. We have offices in New York City and London.
-                                      </h5>
+                                <div class="col-lg-12 table-cell">
+                                    <div class="slider-content">
+                                        <h3 class="slider-content-title" data-swiper-parallax="-100"><img class="intro-pineapple" src="img/pineapple-small.png"/></h3>
+                                        <h3>The web can be as complicated as it sounds, but we know how it fits together.</h3>
+                                        <h5 class="slider-content-text pineapple-text" data-swiper-parallax="-200">Pineapple is a full-service digital agency with an in-house team of specialists equipped to handle just about any digital project. We have offices in New York City and London.
+                                        </h5>
                                     </div>
-
                                 </div>
 
-                                <div class="col-lg-12">
+                                <div class="col-lg-6 table-cell">
+                                    <div class="slider-thumb" data-swiper-parallax="-300" data-swiper-parallax-duration="500">
 
+                                    </div>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <!-- End Slide Conversion -->
+                    <!-- End Slide Intro -->
 
                     <!-- Slide SEO -->
                     <div class="seo-slide top-slide swiper-slide bg-primary-color main-slider-bg-dark thumb-left">
 
                         <div class="container table full-height">
-                            <div class="row table-cell">
+                            <div class="slider-custom row table-cell">
 
                                 <div class="col-lg-5 table-cell">
                                     <div class="slider-content">
@@ -166,29 +179,18 @@
                                         <h5 class="slider-content-text" data-swiper-parallax="-200">It's a constantly evolving discipline which marries technical considerations with content, social, and keyword strategies. (Naturally, we're very good at it.)
                                         </h5>
 
-                                        <!-- <div class="main-slider-btn-wrap" data-swiper-parallax="-300">
-                                            <a href="#"
-                                               class="btn btn-medium btn--dark btn-hover-shadow">
-                                                <span class="text">learn more</span>
-                                                <span class="semicircle"></span>
-                                            </a>
-
-
-                                            <a href="#" class="btn btn-small btn--primary"
-                                               data-swiper-parallax="-300">
-                                                <span class="text">Another Link</span>
-                                                <i class="seoicon-right-arrow"></i>
-                                            </a>
-                                        </div> -->
+                                        <a href="/seo" class="learn-more-btn btn btn-medium btn--dark btn-hover-shadow">
+                                          <span class="text">learn more</span>
+                                        </a>
 
                                     </div>
                                 </div>
 
-                                <div class="col-lg-7 table-cell">
+
+
+                                <div class="col-lg-6 table-cell">
                                     <div class="slider-thumb" data-swiper-parallax="-300" data-swiper-parallax-duration="500">
-                                      <div class="slider-image">
-                                        <img src="img/slider2.png" alt="slider">
-                                      </div>
+                                        <img class="slider-image" src="img/slider2.png" alt="slider">
                                     </div>
                                 </div>
 
@@ -201,7 +203,7 @@
                     <div class="marketing-slide top-slide swiper-slide bg-secondary-color main-slider-bg-dark">
 
                         <div class="container table full-height">
-                            <div class="row table-cell">
+                            <div class="slider-custom row table-cell">
                                 <div class="col-lg-6 table-cell">
 
                                     <div class="slider-content">
@@ -212,15 +214,9 @@
                                         <h5 class="slider-content-text" data-swiper-parallax="-200">Don't know your PPC from your SEM? That's what Pineapple is here for. We've managed over $6,000,000 in digital marketing spend across AdWords, Facebook, AdRoll, and dozens of other platforms for our clients, and have consistently outperformed major agencies whose sole focus is digital marketing.
                                         </h5>
 
-                                        <!-- <div class="main-slider-btn-wrap" data-swiper-parallax="-300">
-
-                                          <a href="08_service_ppc_management.html"
-                                             class="btn btn-medium btn--dark btn-hover-shadow">
-                                              <span class="text">Learn More</span>
-                                              <span class="semicircle"></span>
-                                          </a>
-
-                                        </div> -->
+                                        <a href="/digitalmarketing" class="learn-more-btn btn btn-medium btn--dark btn-hover-shadow">
+                                          <span class="text">learn more</span>
+                                        </a>
 
                                     </div>
 
@@ -247,15 +243,9 @@
                                         <h5 class="slider-content-text" data-swiper-parallax="-200">Conversion rate optimization, or simply "CRO", is the study of the factors which affect conversion rates. It's where tech and psychology meet to figure out what makes customers more likely to spend money.
                                         </h5>
 
-                                        <!-- <div class="main-slider-btn-wrap" data-swiper-parallax="-300">
-
-                                          <a href="#"
-                                             class="btn btn-medium btn--dark btn-hover-shadow">
-                                              <span class="text">Learn More</span>
-                                              <span class="semicircle"></span>
-                                          </a>
-
-                                        </div> -->
+                                        <a href="/cro" class="learn-more-btn btn btn-medium btn--dark btn-hover-shadow">
+                                          <span class="text">learn more</span>
+                                        </a>
 
                                     </div>
 
@@ -265,7 +255,6 @@
                                     <div class="slider-thumb" data-swiper-parallax="-400" data-swiper-parallax-duration="500">
                                         <img class="slider-image" src="img/slider4.png" alt="slider">
                                     </div>
-
                                 </div>
 
                             </div>
@@ -277,7 +266,7 @@
                     <div class="ecommerce-slide swiper-slide top-slide bg-green-color main-slider-bg-dark">
 
                         <div class="container table full-height">
-                            <div class="row table-cell">
+                            <div class="slider-custom row table-cell">
 
                                 <div class="col-lg-6 table-cell">
                                     <div class="slider-content">
@@ -287,16 +276,10 @@
 
                                         <h5 class="slider-content-text" data-swiper-parallax="-200">Looking to set up an e-commerce site? It can be messy doing it alone, but we at Pineapple can handle the entire process from site build to customer acquisition, and train your team to take the ongoing responsibilities on in-house as desired.
                                         </h5>
-<!--
-                                        <div class="main-slider-btn-wrap" data-swiper-parallax="-300">
 
-                                            <a href="#"
-                                               class="btn btn-medium btn--dark btn-hover-shadow">
-                                                <span class="text">Learn More</span>
-                                                <span class="semicircle"></span>
-                                            </a>
-
-                                        </div> -->
+                                        <a href="/ecommerce" class="learn-more-btn btn btn-medium btn--dark btn-hover-shadow">
+                                          <span class="text">learn more</span>
+                                        </a>
 
                                     </div>
                                 </div>
@@ -453,23 +436,7 @@
                         </div>
                     </div>
                 </div>
-
-                <!--
-                <div class="row align-center">
-                    <div class="btn-block">
-                        <a href="03_services.html" class="btn btn-medium btn--dark">
-                            <span class="text">More Info</span>
-                            <span class="semicircle"></span>
-                        </a>
-                        <a href="03_services.html" class="btn btn-medium btn--breez">
-                            <span class="text">Get Started!</span>
-                            <span class="semicircle"></span>
-                        </a>
-                    </div>
-                </div>
-              -->
-
-            </div>
+              </div>
 
 
         </div>
@@ -478,6 +445,7 @@
 
 <!-- End Pineapple Process -->
 
+<!-- Featured Work -->
 <!-- Featured Work -->
 
 <div class="container" id="featured-work">
@@ -550,6 +518,8 @@
         </div>
     </div>
 </div>
+
+<!-- End Featured Work -->
 
 <!-- End Featured Work -->
 
@@ -644,15 +614,11 @@
 <!-- End Testimonial-slider -->
 
 <!-- Monthly Pineapple
-
 <div class="container-fluid bg-green-color">
     <div class="row">
         <div class="container">
-
             <div class="row">
-
                 <div class="subscribe scrollme">
-
                     <div class="col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5 col-sm-12 col-xs-12">
                         <h4 class="subscribe-title">The Monthly Pineapple</h4>
                         <form class="subscribe-form" method="post" action="import.php">
@@ -662,9 +628,7 @@
                             </button>
                         </form>
                         <div class="sub-title">Sign up....</div>
-
                     </div>
-
                     <div class="images-block">
                         <img src="img/subscr-gear.png" alt="gear" class="gear">
                         <img src="img/subscr1.png" alt="mail" class="mail">
@@ -675,12 +639,11 @@
         </div>
     </div>
 </div>
-
 End Monthly Pineapple -->
 
 <!-- Pineapple-Score -->
 
-<div class="container-fluid" id="pineapple-score">
+<!-- <div class="container-fluid" id="pineapple-score">
     <div class="row">
 
         <div class="seo-score scrollme">
@@ -732,7 +695,7 @@ End Monthly Pineapple -->
 
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- ... End Pineapple Score -->
 
@@ -761,7 +724,7 @@ End Monthly Pineapple -->
                             <svg enable-background="new 0 0 64 64" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" points="  54,17 32,36 10,17 " stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><line fill="none" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="10.9" x2="26" y1="48" y2="36"/><path d="  M32.7,49H13c-2.2,0-4-1.8-4-4V19c0-2.2,1.8-4,4-4h38c2.2,0,4,1.8,4,4v15.5" fill="none" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><circle cx="44.9" cy="43.1" fill="none" r="10.1" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><path d="  M44,41.4c0,0-1.3,3.4-0.9,5.1c0.4,1.7,2.6,2.1,3.7,1.1" fill="none" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><g><circle cx="45.4" cy="38.3" fill="#DCE9EE" r="0.9"/><path d="M45.4,37.3c-0.5,0-0.9,0.4-0.9,0.9c0,0.5,0.4,0.9,0.9,0.9s0.9-0.4,0.9-0.9C46.4,37.8,46,37.3,45.4,37.3   L45.4,37.3z" fill="#f15b26"/></g></svg>
                         </div>
                         <div class="content">
-                           <a class="contact-label" href="mailto:hi@pineappleny.com?Subject=Hello%20Pineapple" target="_top">hi@pineappleny.com</a>
+                           <a class="contact-label" href="mailto:hello@pineappleny.com?Subject=Hello,%20Pineapple!" target="_top">hello@pineappleny.com</a>
                         </div>
                     </div>
                 </div>
@@ -850,7 +813,7 @@ End Monthly Pineapple -->
 <script src="js/velocity.min.js"></script>
 <script src="js/ScrollMagic.min.js"></script>
 <script src="js/animation.velocity.min.js"></script>
-
+<script src="js/custom.js"></script>
 
 <!-- ...end JS Script -->
 
